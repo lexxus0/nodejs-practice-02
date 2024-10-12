@@ -1,4 +1,5 @@
 import {
+  createProductsController,
   getProductByIdController,
   getProductsController,
 } from '../controllers/products.js';
@@ -11,5 +12,7 @@ const router = Router();
 router.get('/products', ctrlWrapper(getProductsController));
 
 router.get('/products/:productId', ctrlWrapper(getProductByIdController));
+
+router.post('/products', ctrlWrapper(createProductsController));
 
 export default router;

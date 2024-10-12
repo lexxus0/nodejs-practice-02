@@ -8,3 +8,8 @@ export const getAllProducts = async () => {
 export const getProductById = async (productId) => {
   return await collectionProducts.findOne({ _id: productId });
 };
+
+export const createProduct = async (payload) => {
+  const product = await collectionProducts.create(payload);
+  return product;
+};
