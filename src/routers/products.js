@@ -1,5 +1,6 @@
 import {
   createProductsController,
+  deleteProductController,
   getProductByIdController,
   getProductsController,
   updateProductController,
@@ -17,5 +18,7 @@ router.get('/products/:productId', ctrlWrapper(getProductByIdController));
 router.post('/products', ctrlWrapper(createProductsController));
 
 router.patch('/products/:productId', ctrlWrapper(updateProductController));
+
+router.delete('/products/:productId', ctrlWrapper(deleteProductController));
 
 export default router;

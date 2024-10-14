@@ -23,3 +23,8 @@ export const updateProduct = async (productId, payload) => {
 
   return updateProduct;
 };
+
+export const deleteProduct = async (productId) => {
+  const product = await collectionProducts.findOneAndDelete({ _id: productId });
+  return product;
+};
